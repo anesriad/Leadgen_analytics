@@ -1,0 +1,28 @@
+# Environment & secrets
+.env
+configs/service_account.json
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Data (large files — regenerate via notebooks/pipeline)
+datasets/insurance_leadgen_data_old.csv
+data/raw/thelook/*.parquet
+data/staging/*.parquet
+data/mart/*.parquet
+
+# Model artefacts (rebuild with: python src/models/train.py)
+app/artefacts/*.joblib
+
+# MLflow
+mlruns/
+mlflow.db
+
+# pytest
+.pytest_cache/
+
+# OS
+.DS_Store

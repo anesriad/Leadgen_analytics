@@ -1,0 +1,23 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.git/
+.DS_Store
+.ipynb_checkpoints/
+
+# MLflow
+mlruns/
+mlflow.db
+
+# Not needed at runtime
+notebooks/
+datasets/
+data/raw/
+tests/
+src/
+configs/
+Project Context/
+*.ipynb
+README.md
+LICENSE
