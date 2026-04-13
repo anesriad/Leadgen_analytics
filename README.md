@@ -1,4 +1,4 @@
-# LeadSense — Lead Acquisition Profitability
+# Lead Acquisition Profitability
 
 A notebook-driven analytics study of an insurance lead generation business, paired with a Streamlit dashboard for interactive exploration.
 
