@@ -1,18 +1,17 @@
 # Notebooks
 
-Jupyter notebooks for data exploration and experimentation. Run them in order (00 → 04+).
+Run them in order, 01 → 07. Each one writes the artefacts the next one needs.
 
-| # | Notebook | Purpose | Status |
-|---|----------|---------|--------|
-| 00 | `00_dataset_prep.ipynb` | Anonymize original data (5% cut, new IDs, rename cols) — run once | Done |
-| 01 | `01_data_fetch.ipynb` | Load clean CSV, generate synthetic spend | Done |
-| 02 | `02_clean_and_validate.ipynb` | Clean → staging, build mart table with KPIs | Done |
-| 03 | `03_eda_leads.ipynb` | Lead profitability — RPL by dimension, zero-sale keywords | Done |
-| 04 | `04_hypothesis_testing.ipynb` | Statistical tests + A/B sample size example | Done |
-| 05 | `05_modeling.ipynb` | ML — baseline, LightGBM, Optuna tuning, MLflow | Done |
-| 06 | `06_threshold_and_business.ipynb` | Threshold tuning, lift analysis, business sim | Done |
-| 07 | `07_summary.ipynb` | Key findings & takeaways across all notebooks | Done |
+| # | Notebook | Purpose |
+|---|----------|---------|
+| 01 | `01_data_fetch.ipynb` | Load `datasets/insurance_leadgen_data.csv` and take a first look |
+| 02 | `02_clean_and_validate.ipynb` | Standardise columns, build target flags, validate with Pandera, save `data/leads_clean.parquet` |
+| 03 | `03_eda_leads.ipynb` | Lead profitability — RPL by dimension, zero-sale keywords |
+| 04 | `04_hypothesis_testing.ipynb` | Z-test, Kruskal-Wallis, A/B sample size |
+| 05 | `05_modeling.ipynb` | Logistic baseline, LightGBM, Optuna tuning, save model bundle |
+| 06 | `06_threshold_and_business.ipynb` | Threshold sweep, cumulative gains, CAC simulation |
+| 07 | `07_summary.ipynb` | Findings and takeaways across the whole project |
 
 ### Key business constant
 
-`COST_PER_LEAD = £55` — actual cost per lead from the account. Used throughout notebooks 03+ as the breakeven threshold for RPL (Revenue Per Lead) analysis.
+`COST_PER_LEAD = £55` — the actual cost we pay per lead. Used as the breakeven line in NB03 onwards.
